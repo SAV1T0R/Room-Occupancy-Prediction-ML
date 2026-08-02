@@ -46,8 +46,50 @@ This project uses the **Room Occupancy Estimation Dataset** available on Kaggle.
 **Accuracy:** 99.31%
 
 Random Forest achieved the highest overall performance among all evaluated models with an accuracy of approximately 99.3%.
+- **Mean Absolute Error (MAE):** 0.0108
+- **Mean Squared Error (MSE):** 0.0069
+- **Root Mean Squared Error (RMSE):** 0.0829
 
----
+Random Forest achieved the highest overall performance among all evaluated models with an accuracy of approximately 99.3%.
+
+
+## Results
+
+**Random Forest Regressor**
+- Accuracy: **99.31%**
+- Mean Absolute Error (MAE): **0.0108**
+- Root Mean Squared Error (RMSE): **0.0829**
+
+**Decision Tree Regressor**
+- Accuracy: **99.26%**
+- Mean Absolute Error (MAE): **0.0095**
+- Root Mean Squared Error (RMSE): **0.0814**
+
+**Support Vector Machine (SVM)**
+- Accuracy: **97.93%**
+- Mean Absolute Error (MAE): **0.0928**
+- Root Mean Squared Error (RMSE): **0.2644**
+
+**k-Nearest Neighbors (k-NN)**
+- Accuracy: **98.96%**
+- Mean Absolute Error (MAE): **0.0147**
+- Root Mean Squared Error (RMSE): **0.1008**
+
+
+
+5-Fold Cross-Validation Results
+Model                          Accuracy                MAE               RMSE        Weighted F1
+----------------------------------------------------------------------------------------------
+Random Forest           0.9922 ± 0.0015    0.0104 ± 0.0019    0.0858 ± 0.0146    0.9922 ± 0.0015
+Decision Tree           0.9924 ± 0.0013    0.0092 ± 0.0021    0.1151 ± 0.0218    0.9924 ± 0.0013
+SVM                     0.9827 ± 0.0010    0.0671 ± 0.0029    0.1603 ± 0.0195    0.9827 ± 0.0010
+k-NN                    0.9895 ± 0.0028    0.0140 ± 0.0025    0.1045 ± 0.0157    0.9896 ± 0.0028
+
+
+
+### Model Selection
+
+Random Forest Regressor was selected as the final model due to its highest overall accuracy (99.31%), strong generalization capability, and robustness against overfitting. Its ensemble learning approach combines multiple decision trees to produce stable and reliable predictions for room occupancy estimation.
 
 ## Technologies Used
 
@@ -84,20 +126,8 @@ pandas
 matplotlib
 scikit-learn
 ```
+Hyperparameter Tuning Results (GridSearchCV)
+Best Parameters: {'bootstrap': False, 'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
+Best CV Score: 0.9909798821330014
 
----
-
-## Repository Structure
-
-```
-Room-Occupancy-Prediction-ML/
-│── README.md
-│── requirements.txt
-│── Room_Occupancy_Prediction.ipynb
-│── images/
-│   ├── confusion_matrix.png
-│   ├── model_comparison.png
-│   ├── cross_validation.png
-│   └── prediction_plot.png
-```
 
