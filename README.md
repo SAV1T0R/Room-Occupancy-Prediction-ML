@@ -131,3 +131,16 @@ Best Parameters: {'bootstrap': False, 'max_depth': 10, 'max_features': 'sqrt', '
 Best CV Score: 0.9909798821330014
 
 
+Project Structure
+Room-Occupancy-Prediction-ML/
+├── README.md
+├── requirements.txt
+├── Room_Occupancy_Prediction.ipynb
+├── circuit_schematic.png
+├── classification_report.png
+├── confusion_matrix.png
+├── model_performance_comparison.png
+├── cross_validation_accuracy.png
+└── signal_conditioned.png
+
+
